@@ -2,6 +2,7 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 // import avatar from '@public/vercel.svg'
 // import { Avatar } from '@components/index'
+// import { Name } from '@components/index'
 
 const Home: NextPage = () => {
   return (
@@ -12,6 +13,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* <Avatar mode="list" img={avatar} /> */}
+      {/* <Name mode="list" name="Pepe Pepe" /> */}
     </div>
   )
 }
