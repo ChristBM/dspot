@@ -1,0 +1,17 @@
+.available_circle {
+  width: 23px;
+  height: 23px;
+  border-width: 4px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.is_available {
+  border-color: #FFFFFF;
+  background-color: #16BA44;
+}
+
+.not_available {
+  border-color: #F4F6FE;
+  background-color: #B1B9DB;
+}
