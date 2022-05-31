@@ -4,6 +4,7 @@ import Head from 'next/head'
 // import { Avatar } from '@components/index'
 // import { Name } from '@components/index'
 // import { Available } from '@components/Available/Available'
+// import { Status } from '@components/Status/Status'
 
 const Home: NextPage = () => {
   return (
@@ -16,6 +17,7 @@ const Home: NextPage = () => {
       {/* <Avatar mode="list" img={avatar} /> */}
       {/* <Name mode="list" name="Pepe Pepe" /> */}
       {/* <Available available={false} /> */}
+      {/* <Status text="At Work..." /> */}
     </div>
   )
 }

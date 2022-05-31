@@ -1,0 +1,16 @@
+.status_cont {
+  display: flex;
+  width: auto;
+}
+
+.status_txt {
+  display: flex;
+  height: 24px;
+  padding: 0 20px;
+  border: 1px solid #B1B9DB;
+  border-radius: 20px;
+  color: #B1B9DB;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 24px;
+}
