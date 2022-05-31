@@ -5,6 +5,7 @@ import Head from 'next/head'
 // import { Name } from '@components/index'
 // import { Available } from '@components/Available/Available'
 // import { Status } from '@components/Status/Status'
+// import { Icon } from '@components/Icon/Icon'
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,9 @@ const Home: NextPage = () => {
       {/* <Name mode="list" name="Pepe Pepe" /> */}
       {/* <Available available={false} /> */}
       {/* <Status text="At Work..." /> */}
+      {/* <div style={{ backgroundColor: '#000' }}>
+        <Icon iconType="arrow_back" />
+      </div> */}
     </div>
   )
 }

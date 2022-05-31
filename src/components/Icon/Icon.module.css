@@ -1,0 +1,25 @@
+.icon {
+  display: flex;
+  padding: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.icon_bg__arrowback {
+  background-color: #FFFFFF;
+  background-image: url('/icons/arrowBack.svg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.icon_bg__exit {
+  background-color: #FFFFFF1A;
+  background-image: url('/icons/exit.svg');
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
