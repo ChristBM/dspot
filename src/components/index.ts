@@ -1,2 +1,6 @@
+export * from './Available/Available'
 export * from './Avatar/Avatar'
+export * from './Icon/Icon'
+export * from './MainBtn/MainBtn'
 export * from './Name/Name'
+export * from './Status/Status'

@@ -7,7 +7,7 @@ describe('<Icon />', () => {
     render(<Icon iconType={iconType} />)
   })
 
-  it('should render a button', () => {
+  it('should render an icon', () => {
     expect(screen.getByRole('figure')).toBeInTheDocument()
   })
 

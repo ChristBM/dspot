@@ -7,7 +7,7 @@ describe('<Status />', () => {
     render(<Status text={text} />)
   })
 
-  it('should render a button', () => {
+  it('should render a text', () => {
     expect(screen.getByText(text)).toBeInTheDocument()
   })
 

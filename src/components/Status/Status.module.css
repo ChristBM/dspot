@@ -9,8 +9,10 @@
   padding: 0 20px;
   border: 1px solid #B1B9DB;
   border-radius: 20px;
+  font-family: 'Inter';
   color: #B1B9DB;
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
+  text-transform: capitalize;
 }

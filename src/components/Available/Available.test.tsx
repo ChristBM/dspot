@@ -6,7 +6,7 @@ describe('<Available />', () => {
     render(<Available available />)
   })
 
-  it('should render a button', () => {
+  it('should render an icon', () => {
     expect(screen.getByRole('figure')).toBeInTheDocument()
   })
 

@@ -1,5 +1,7 @@
 .name {
+  font-family: 'Inter';
   color: black;
+  text-transform: capitalize;
 }
 .name_list {
   font-size: 16px;

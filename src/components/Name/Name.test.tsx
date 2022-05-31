@@ -9,7 +9,7 @@ describe('<Name />', () => {
     render(<Name mode={mode} name={name} />)
   })
 
-  it('should render a button', () => {
+  it('should render a text', () => {
     expect(screen.getByText(name)).toBeInTheDocument()
   })
 

@@ -1,0 +1,45 @@
+.main_btn {
+  display: flex;
+  width: 93px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #0637F9;
+  border-radius: 4px;
+  background-color: #2E57FA;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #FFFFFF;
+  text-transform: capitalize;
+  transition: background-color 0.2s linear;
+}
+
+.main_btn:hover, .main_btn:focus {
+  background-color: #0637F9;
+  transition: background-color 0.2s ease-in;
+}
+
+.main_btn:active {
+  background-color: #052DCC;
+  transition: background-color 0.2s ease-out;
+}
+
+.main_btn__disable {
+  display: flex;
+  width: 93px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #D0D3DA;
+  background: #F8F8FA;
+  font-family: 'Inter';
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #AAAFBD;
+  text-transform: capitalize;
+  user-select: none;
+}
