@@ -1,0 +1,8 @@
+.mytabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 25px;
+  gap: 10px;
+}

@@ -12,9 +12,9 @@ export function Avatar({ mode, img }: Props) {
     <div
       className={
         `${styles.img}
-        ${mode === 'list' && styles.img_list}
-        ${mode === 'details' && styles.img_details}
-        ${mode === 'gallery' && styles.img_gallery}`
+        ${mode === 'list' ? styles.img_list : ''}
+        ${mode === 'details' ? styles.img_details : ''}
+        ${mode === 'gallery' ? styles.img_gallery : ''}`
       }
     >
       <Image src={img} alt="user avatar" loading="lazy" />

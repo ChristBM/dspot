@@ -1,1 +1,1 @@
-// export * from './Component/Component'
+export * from './Tabs/Tabs'

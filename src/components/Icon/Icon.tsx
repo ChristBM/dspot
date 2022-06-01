@@ -9,8 +9,8 @@ export function Icon({ iconType }: Props) {
     <div
       role="figure"
       className={`${styles.icon}
-      ${iconType === 'arrow_back' && styles.icon_bg__arrowback}
-      ${iconType === 'exit' && styles.icon_bg__exit}`}
+      ${iconType === 'arrow_back' ? styles.icon_bg__arrowback : ''}
+      ${iconType === 'exit' ? styles.icon_bg__exit : ''}`}
     />
   )
 }
