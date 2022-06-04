@@ -1,0 +1,44 @@
+.information {
+  display: flex;
+  padding: 28px;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.info_top {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-overflow: ellipsis;
+}
+
+.info_top__bio {
+  height: 72px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.info_list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+@media screen and (max-width: 510px) {
+  .information {
+    padding: 18px;
+    gap: 10px;
+    overflow-x: hidden;
+  }
+
+  .info_list {
+    gap: 10px;
+  }
+}
