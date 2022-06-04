@@ -1,0 +1,14 @@
+.friend {
+  display: flex;
+  width: 100%;
+  padding-block: 60px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #e5e5e5;
+}
+
+.friend_viewport {
+  height: 100vh;
+  overflow: hidden;
+}
