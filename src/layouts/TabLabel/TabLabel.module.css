@@ -12,7 +12,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #5C5F6B;
+  color: #5c5f6b;
   text-transform: capitalize;
   user-select: none;
   cursor: pointer;
@@ -32,25 +32,24 @@
 
 .tab {
   display: none;
-  width: 488px;
-  min-height: 474px;
+  height: 488px;
   border-radius: 8px;
-  padding: 28px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   box-shadow: 0px 10px 20px rgba(204, 208, 223, 0.5);
   order: 1;
+  overflow-y: hidden;
 }
 
-.input_radio:checked+.label_radio+.tab {
-  display: block;
+.input_radio:checked + .label_radio + .tab {
+  display: inline-block;
 }
 
-.input_radio:checked+.label_radio {
+.input_radio:checked + .label_radio {
   color: #000000;
   transition: color 0.3s linear;
 }
 
-.input_radio:checked+.label_radio span {
+.input_radio:checked + .label_radio span {
   width: 65px;
   opacity: 1;
   transition: width 0.3s linear, opacity 0.3s linear;
