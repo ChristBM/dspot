@@ -9,8 +9,12 @@
     "export": "next export",
     "test": "jest",
     "test:ci": "jest --ci",
+    "lint:fix": "next lint --fix",
     "lint": "next lint",
-    "lint:fix": "next lint --fix"
+    "lint:com": "next lint --dir src/components",
+    "lint:lay": "next lint --dir src/layouts",
+    "lint:pag": "next lint --dir src/pages",
+    "format": "prettier --write src"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.2",
@@ -32,13 +36,19 @@
     "eslint": "^7.32.0 || ^8.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-next": "12.1.6",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^26.4.6",
+    "eslint-plugin-jest-dom": "^4.0.2",
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "eslint-plugin-testing-library": "^5.5.1",
     "identity-obj-proxy": "^3.0.0",
+    "image-validator": "^1.2.1",
     "jest": "^28.1.0",
     "jest-environment-jsdom": "^28.1.0",
+    "prettier": "^2.6.2",
     "typescript": "4.7.2"
   }
 }
