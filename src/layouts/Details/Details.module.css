@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  width: 100%;
+  max-width: 732px;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.details {
+  display: flex;
+  width: 100%;
+  max-width: 608px;
+  height: 904px;
+  border-radius: 8px;
+  flex-direction: column;
+  gap: 30px;
+  background-color: #ffffff80;
+}
+
+.arrow_back {
+  display: block;
+  height: 45px;
+  animation: arrow 0.8s ease-out forwards;
+}
+
+@keyframes arrow {
+  0% {
+    transform: translateX(0);
+  }
+
+  20% {
+    transform: translateX(8px);
+  }
+
+  60% {
+    transform: translateX(-5px);
+  }
+
+  90% {
+    transform: translateX(3px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (min-width: 670px) {
+  .container {
+    gap: 0;
+    flex-direction: row;
+  }
+}
