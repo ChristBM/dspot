@@ -1,14 +1,16 @@
-import { useRouter } from 'next/router'
-import styles from '@components/MainBtn/MainBtn.module.css'
+import { useRouter } from 'next/router';
+
+import styles from './MainBtn.module.css';
 
 type Props = {
-  text: string
-  id: string
-  disable: boolean
-}
+  text: string;
+  id: string;
+  disable: boolean;
+};
 
-export function MainBtn({ text, id, disable }: Props) {
-  const router = useRouter()
+export default function MainBtn({ text, id, disable }: Props) {
+  const router = useRouter();
+
   return (
     <button
       type="button"
@@ -17,5 +19,5 @@ export function MainBtn({ text, id, disable }: Props) {
     >
       {text}
     </button>
-  )
+  );
 }

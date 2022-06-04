@@ -1,18 +1,11 @@
-import { render, screen } from '@testing-library/react'
-import { Status } from './Status'
+import { render, screen } from '@testing-library/react';
+import Status from '.';
 
 describe('<Status />', () => {
-  const text = 'At work...'
-  beforeEach(() => {
-    render(<Status text={text} />)
-  })
+  const text = 'At work...';
 
   it('should render a text', () => {
-    expect(screen.getByText(text)).toBeInTheDocument()
-  })
-
-  afterAll(() => {
-    render(<Status text={text} />)
-    screen.debug()
-  })
-})
+    render(<Status text={text} />);
+    expect(screen.getByText(text)).toBeInTheDocument();
+  });
+});

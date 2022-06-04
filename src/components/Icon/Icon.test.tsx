@@ -1,18 +1,11 @@
-import { render, screen } from '@testing-library/react'
-import { Icon } from './Icon'
+import { render, screen } from '@testing-library/react';
+import Icon from '.';
 
 describe('<Icon />', () => {
-  const iconType = 'exit'
-  beforeEach(() => {
-    render(<Icon iconType={iconType} />)
-  })
+  const iconType = 'exit';
 
   it('should render an icon', () => {
-    expect(screen.getByRole('figure')).toBeInTheDocument()
-  })
-
-  afterAll(() => {
-    render(<Icon iconType={iconType} />)
-    screen.debug()
-  })
-})
+    render(<Icon iconType={iconType} />);
+    expect(screen.getByRole('figure')).toBeInTheDocument();
+  });
+});

@@ -1,17 +1,9 @@
-import { render, screen } from '@testing-library/react'
-import { Available } from './Available'
+import { render, screen } from '@testing-library/react';
+import Available from '.';
 
 describe('<Available />', () => {
-  beforeEach(() => {
-    render(<Available available />)
-  })
-
   it('should render an icon', () => {
-    expect(screen.getByRole('figure')).toBeInTheDocument()
-  })
-
-  afterAll(() => {
-    render(<Available available />)
-    screen.debug()
-  })
-})
+    render(<Available available mode="list" />);
+    expect(screen.getByRole('figure')).toBeInTheDocument();
+  });
+});

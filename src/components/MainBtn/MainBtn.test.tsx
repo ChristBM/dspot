@@ -1,20 +1,12 @@
-import { render, screen } from '@testing-library/react'
-import { MainBtn } from './MainBtn'
+import { render, screen } from '@testing-library/react';
+import MainBtn from '.';
 
 describe('<MainBtn />', () => {
-  const text = 'details'
-  const id = 1
-
-  beforeEach(() => {
-    render(<MainBtn text={text} id={id.toString()} disable={false} />)
-  })
+  const text = 'details';
+  const id = 1;
 
   it('should render a button', () => {
-    expect(screen.getByRole('button', { name: text })).toBeInTheDocument()
-  })
-
-  afterAll(() => {
-    render(<MainBtn text={text} id={id.toString()} disable={false} />)
-    screen.debug()
-  })
-})
+    render(<MainBtn text={text} id={id.toString()} disable={false} />);
+    expect(screen.getByRole('button', { name: text })).toBeInTheDocument();
+  });
+});

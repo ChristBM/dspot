@@ -1,11 +1,11 @@
-import styles from '@components/Name/Name.module.css'
+import styles from './Name.module.css';
 
 type Props = {
-  mode: 'list' | 'details'
-  name: string
-}
+  mode: 'list' | 'details';
+  name: string;
+};
 
-export function Name({ mode, name }: Props) {
+export default function Name({ name, mode }: Props) {
   return (
     <h3
       className={`${styles.name}
@@ -15,5 +15,5 @@ export function Name({ mode, name }: Props) {
     >
       {name}
     </h3>
-  )
+  );
 }

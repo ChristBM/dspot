@@ -4,25 +4,27 @@
   height: 40px;
   justify-content: center;
   align-items: center;
-  border: 1px solid #0637F9;
+  border: 1px solid #0637f9;
   border-radius: 4px;
-  background-color: #2E57FA;
+  background-color: #2e57fa;
   font-family: 'Inter';
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #FFFFFF;
+  color: #ffffff;
   text-transform: capitalize;
+  cursor: pointer;
   transition: background-color 0.2s linear;
 }
 
-.main_btn:hover, .main_btn:focus {
-  background-color: #0637F9;
+.main_btn:hover,
+.main_btn:focus {
+  background-color: #0637f9;
   transition: background-color 0.2s ease-in;
 }
 
 .main_btn:active {
-  background-color: #052DCC;
+  background-color: #052dcc;
   transition: background-color 0.2s ease-out;
 }
 
@@ -33,13 +35,13 @@
   justify-content: center;
   align-items: center;
   border-radius: 4px;
-  border: 1px solid #D0D3DA;
-  background: #F8F8FA;
+  border: 1px solid #d0d3da;
+  background: #f8f8fa;
   font-family: 'Inter';
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #AAAFBD;
+  color: #aaafbd;
   text-transform: capitalize;
   user-select: none;
 }

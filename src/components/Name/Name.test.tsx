@@ -1,20 +1,11 @@
-import { render, screen } from '@testing-library/react'
-import { Name } from './Name'
+import { render, screen } from '@testing-library/react';
+import Name from '.';
 
 describe('<Name />', () => {
-  const name = 'Jeremy Davis'
-  const mode = 'list'
-
-  beforeEach(() => {
-    render(<Name mode={mode} name={name} />)
-  })
-
+  const name = 'Jeremy Davis';
+  const mode = 'list';
   it('should render a text', () => {
-    expect(screen.getByText(name)).toBeInTheDocument()
-  })
-
-  afterAll(() => {
-    render(<Name mode={mode} name={name} />)
-    screen.debug()
-  })
-})
+    render(<Name mode={mode} name={name} />);
+    expect(screen.getByText(name)).toBeInTheDocument();
+  });
+});

@@ -1,16 +1,17 @@
 .status_cont {
   display: flex;
   width: auto;
+  user-select: none;
 }
 
 .status_txt {
   display: flex;
   height: 24px;
-  padding: 0 20px;
-  border: 1px solid #B1B9DB;
+  padding: 0 8px;
+  border: 1px solid #b1b9db;
   border-radius: 20px;
   font-family: 'Inter';
-  color: #B1B9DB;
+  color: #b1b9db;
   font-weight: 500;
   font-size: 12px;
   line-height: 24px;
