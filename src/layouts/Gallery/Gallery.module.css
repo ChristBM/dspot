@@ -1,0 +1,29 @@
+.gallery {
+  display: flex;
+  max-width: 488px;
+  height: 100%;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  overflow-y: hidden;
+}
+
+@media screen and (min-width: 470px) {
+  .gallery {
+    height: auto;
+    justify-content: center;
+    align-items: stretch;
+  }
+}
+
+@media screen and (min-width: 624px) {
+  .gallery {
+    display: grid;
+    height: 100%;
+    width: 488px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
