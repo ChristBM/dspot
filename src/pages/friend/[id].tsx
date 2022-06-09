@@ -8,6 +8,7 @@ import styles from '@styles/Friend.module.css';
 
 const Friend: NextPage = () => {
   const isOpen = useAppSelector((state) => state.modal.isOpen);
+
   return (
     <div className={`${styles.friend} ${isOpen ? styles.friend_viewport : ''}`}>
       <Head>

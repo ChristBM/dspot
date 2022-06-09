@@ -4,7 +4,7 @@
   "filepath": "",
   "useTabs": false,
   "overrides": [],
-  "printWidth": 80,
+  "printWidth": 100,
   "endOfLine": "lf",
   "cursorOffset": -1,
   "singleQuote": true,

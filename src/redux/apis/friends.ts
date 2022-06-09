@@ -9,14 +9,14 @@ export const friendsApi = createApi({
     baseUrl: 'http://private-5bdb3-friendmock.apiary-mock.com',
   }),
 
+  keepUnusedDataFor: 600,
+
   endpoints: (builder) => ({
     getFriends: builder.query<ListFriendData[], void>({
       query: () => '/friends',
-      keepUnusedDataFor: 6000,
     }),
     getDetails: builder.query<FriendsDetails, string>({
       query: (id) => `/friends/${id}`,
-      keepUnusedDataFor: 6000,
     }),
   }),
 });

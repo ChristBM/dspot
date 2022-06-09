@@ -65,6 +65,8 @@
         "jsx-a11y/anchor-is-valid": "off",
         "import/extensions": "off",
         "import/no-extraneous-dependencies": "off",
-        "react/function-component-definition": "off"
+        "react/function-component-definition": "off",
+        "no-floating-promises": "off",
+        "object-curly-newline": "off"
     }
 }
