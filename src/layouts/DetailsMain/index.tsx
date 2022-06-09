@@ -1,11 +1,12 @@
 import Gallery from '@layouts/Gallery';
 import PersonalInfo from '@layouts/PersonalInfo';
 import TabLabel from '@layouts/TabLabel';
-import Tabs from '@layouts/Tabs';
+
+import styles from './DetailsMain.module.css';
 
 export default function DetailsMain() {
   return (
-    <Tabs>
+    <main className={styles.details_main}>
       <TabLabel labelTxt="info" isDefaultChecked group="g_details">
         <PersonalInfo />
       </TabLabel>
@@ -13,6 +14,6 @@ export default function DetailsMain() {
       <TabLabel labelTxt="photos" isDefaultChecked={false} group="g_details">
         <Gallery />
       </TabLabel>
-    </Tabs>
+    </main>
   );
 }

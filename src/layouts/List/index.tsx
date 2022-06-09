@@ -6,7 +6,7 @@ import Spinner from '@components/Spinner';
 import styles from './List.module.css';
 
 export default function List() {
-  const { data: listOfFriends, isLoading, error } = useGetFriendsQuery();
+  const { data, isLoading, error } = useGetFriendsQuery();
 
   return (
     <section className={styles.ul_container}>
@@ -14,10 +14,12 @@ export default function List() {
 
       <main className={styles.list}>
         {isLoading && <Spinner />}
+
         {error && <LoadingError text="Oops... Connection Error!" />}
+
         {!isLoading && !error ? (
           <ul className={styles.ul}>
-            {listOfFriends?.map((friend) => (
+            {data?.map((friend) => (
               <ListElement
                 key={`${friend.id}-${friend.first_name}`}
                 id={friend.id.toString()}

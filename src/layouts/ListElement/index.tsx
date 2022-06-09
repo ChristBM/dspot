@@ -1,11 +1,10 @@
+import { NextRouter, useRouter } from 'next/router';
 import useImgValidator from '@utils/hooks/useImgValidator';
 import Available from '@components/Available';
 import Avatar from '@components/Avatar';
 import MainBtn from '@components/MainBtn';
 import Name from '@components/Name';
 import Status from '@components/Status';
-
-import avatar from '@public/avatar.jpg';
 
 import styles from './ListElement.module.css';
 
@@ -24,13 +23,14 @@ export default function ListElement({
   status,
   available,
 }: Props) {
+  const router: NextRouter = useRouter();
   const isAnImage = useImgValidator(img);
 
   return (
     <li className={styles.li}>
       <section className={styles.li_left}>
         <article className={styles.li_left__image}>
-          <Avatar mode="list" img={isAnImage ? img : avatar} />
+          <Avatar mode="list" img={isAnImage ? img : '/avatar.jpg'} />
           <div className={styles.li_left__available}>
             <Available available={available} mode="list" />
           </div>
@@ -45,7 +45,11 @@ export default function ListElement({
       </section>
 
       <section className={styles.li_right}>
-        <MainBtn text="Details" id={id} disable={false} />
+        <MainBtn
+          text="Details"
+          disable={false}
+          handleClick={() => router.push(`/friend/${id}`)}
+        />
       </section>
     </li>
   );

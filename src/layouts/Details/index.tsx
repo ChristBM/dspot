@@ -1,6 +1,6 @@
-import { useRouter } from 'next/router';
+import React from 'react';
 import Link from 'next/link';
-import { useGetDetailsQuery } from '@redux/apis/friends';
+import useHandleRoute from '@utils/hooks/useHandleRoute';
 import DetailsHeader from '@layouts/DetailsHeader';
 import DetailsMain from '@layouts/DetailsMain';
 import Icon from '@components/Icon';
@@ -9,11 +9,8 @@ import Spinner from '@components/Spinner';
 
 import styles from './Details.module.css';
 
-export default function Details() {
-  const router = useRouter();
-  const { isLoading, error } = useGetDetailsQuery(
-    router.query?.id ? 'id' : 'id',
-  );
+function Details() {
+  const { isLoading, error } = useHandleRoute();
 
   return (
     <section className={styles.container}>
@@ -23,7 +20,7 @@ export default function Details() {
         </a>
       </Link>
 
-      <article className={styles.details}>
+      <div className={styles.details}>
         {isLoading && <Spinner />}
         {error && <LoadingError text="Oops... Connection Error!" />}
         {!isLoading && !error ? (
@@ -32,7 +29,9 @@ export default function Details() {
             <DetailsMain />
           </>
         ) : null}
-      </article>
+      </div>
     </section>
   );
 }
+
+export default React.memo(Details);

@@ -1,27 +1,13 @@
-import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { useAppDispatch } from '@redux/hooks';
-import useImgArrayValidator from '@utils/hooks/useImgArrayValidator';
 import { openModal, setPicture } from '@redux/slices/modal';
-import { FriendsDetails } from '@utils/interfaces/FriendsDetails';
-import { useGetDetailsQuery } from '@redux/apis/friends';
-
-import gallery from '@public/gallery.jpg';
-import modal from '@public/modal.jpg';
+import useGalleryData from '@utils/hooks/useGalleryData';
 
 import styles from './Gallery.module.css';
 
 export default function Gallery() {
-  const router = useRouter();
-  const { data } = useGetDetailsQuery(router.query?.id ? 'id' : 'id');
   const dispatch = useAppDispatch();
-
-  const { photos } = data as FriendsDetails;
-  const galleryPhotos = photos.length < 9 ? photos : photos.slice(0, 9);
-  const photosArr = useImgArrayValidator(galleryPhotos);
-  const pictures = photosArr.length
-    ? photosArr
-    : galleryPhotos.map(() => gallery);
+  const { pictures } = useGalleryData();
 
   return (
     <section className={styles.gallery}>
@@ -30,6 +16,8 @@ export default function Gallery() {
           key={Math.random().toString(36).slice(0, 6)}
           src={photo}
           alt="photo"
+          width={136}
+          height={136}
           layout="fixed"
           loading="lazy"
           style={{
@@ -38,7 +26,7 @@ export default function Gallery() {
             backgroundColor: '#E5E5E5',
           }}
           onClick={() => {
-            dispatch(setPicture(photosArr.length ? photo : modal));
+            dispatch(setPicture(photo === '/gallery.jpg' ? '/modal.jpg' : photo));
             dispatch(openModal());
           }}
         />

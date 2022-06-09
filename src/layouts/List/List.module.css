@@ -27,6 +27,8 @@
   height: 552px;
   padding-inline: 40px;
   overflow-y: scroll;
+  scrollbar-color: #b1b9db #b1b9db4d;
+  scrollbar-width: thin;
 }
 
 .list::-webkit-scrollbar {

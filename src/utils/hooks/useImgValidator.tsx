@@ -1,9 +1,6 @@
 import { validateImage } from 'image-validator';
-import { useEffect, useState } from 'react';
 
 export default function useImgValidator(urlImg: string) {
-  const [isImg, setIsImg] = useState(false);
-
   const validation = async (image: string): Promise<boolean> => {
     try {
       const res = await validateImage(image);
@@ -13,11 +10,11 @@ export default function useImgValidator(urlImg: string) {
     }
   };
 
-  useEffect(() => {
-    validation(urlImg)
-      .then((res) => setIsImg(res as boolean))
-      .catch(() => setIsImg(false));
-  }, [urlImg]);
+  let isImg = false;
+
+  validation(urlImg).then((res) => {
+    isImg = res;
+  });
 
   return isImg;
 }
