@@ -1,5 +1,5 @@
 import Image, { StaticImageData } from 'next/image';
-import styles from '@components/Avatar/Avatar.module.css';
+import styles from './Avatar.module.css';
 
 type Props = {
   mode: 'list' | 'details';
@@ -13,8 +13,8 @@ export default function Avatar({ img, mode }: Props) {
         src={img}
         alt="friend's avatar"
         loading="lazy"
-        width={`${mode === 'list' ? 60 : 150}`}
-        height={`${mode === 'list' ? 60 : 150}`}
+        width={mode === 'list' ? 60 : 150}
+        height={mode === 'list' ? 60 : 150}
         style={{ borderRadius: '4px', backgroundColor: '#E5E5E5' }}
       />
     </div>

@@ -1,13 +1,16 @@
 import { render, screen } from '@testing-library/react';
-import avatar from '@public/vercel.svg';
 import Avatar from '.';
 
+const alt = "friend's avatar";
 describe('<Avatar />', () => {
-  const mode = 'list';
-  const alt = "friend's avatar";
-
-  it('should render an image', () => {
-    render(<Avatar mode={mode} img={avatar} />);
+  it('should render an avatar image', () => {
+    render(<Avatar img="/avatar.jpg" mode="list" />);
     expect(screen.getByAltText(alt)).toBeInTheDocument();
+  });
+  it('should have a background color and border radius', () => {
+    render(<Avatar img="/avatar.jpg" mode="list" />);
+    expect(screen.getByAltText(alt)).toHaveStyle(
+      'border-radius: 4px; background-color: rgb(229, 229, 229)',
+    );
   });
 });

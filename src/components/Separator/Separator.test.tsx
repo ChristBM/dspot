@@ -6,4 +6,9 @@ describe('<Separator />', () => {
     render(<Separator />);
     expect(screen.getByRole('figure')).toBeInTheDocument();
   });
+
+  it('should have some styles', () => {
+    render(<Separator />);
+    expect(screen.getByRole('figure')).toHaveClass('separator');
+  });
 });
