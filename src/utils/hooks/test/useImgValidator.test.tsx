@@ -10,7 +10,6 @@ describe('useImgValidator hook', () => {
   it('should render correctly', () => {
     const { result } = renderHook(() => useImgValidator('/avatar.jpg'));
     const res = result.current;
-    console.log(result, res);
 
     expect(res).toBeDefined();
   });

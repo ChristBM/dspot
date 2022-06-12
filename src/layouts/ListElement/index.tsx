@@ -1,5 +1,4 @@
-import { NextRouter, useRouter } from 'next/router';
-import useImgValidator from '@utils/hooks/useImgValidator';
+import useListElementPrepare from '@utils/hooks/useListElementPrepare';
 import Available from '@components/Available';
 import Avatar from '@components/Avatar';
 import MainBtn from '@components/MainBtn';
@@ -16,15 +15,8 @@ type Props = {
   available: boolean;
 };
 
-export default function ListElement({
-  id,
-  img,
-  name,
-  status,
-  available,
-}: Props) {
-  const router: NextRouter = useRouter();
-  const isAnImage = useImgValidator(img);
+export default function ListElement({ id, img, name, status, available }: Props) {
+  const { isAnImage, handleRoute } = useListElementPrepare(img, id);
 
   return (
     <li className={styles.li}>
@@ -45,11 +37,7 @@ export default function ListElement({
       </section>
 
       <section className={styles.li_right}>
-        <MainBtn
-          text="Details"
-          disable={false}
-          handleClick={() => router.push(`/friend/${id}`)}
-        />
+        <MainBtn text="Details" disable={false} handleClick={handleRoute} />
       </section>
     </li>
   );

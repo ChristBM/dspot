@@ -1,8 +1,8 @@
 /* eslint-disable testing-library/no-render-in-setup */
 /* eslint-disable object-curly-newline */
 import { render, screen } from '@testing-library/react';
-// import userEvent from '@testing-library/user-event';
-import useImgValidator from '@utils/hooks/useImgValidator';
+import userEvent from '@testing-library/user-event';
+import useListElementPrepare from '@utils/hooks/useListElementPrepare';
 import ListElement from '.';
 
 const props = {
@@ -13,29 +13,21 @@ const props = {
   available: true,
 };
 
+const mockHook = {
+  isAnImage: true,
+  handleRoute: jest.fn().mockReturnValue(true),
+};
+
 const { id, img, name, status, available } = props;
 
-jest.mock('@utils/hooks/useImgValidator');
-
-jest.mock('next/router', () => ({
-  ...jest.requireActual('next/router'),
-  useRouter: jest.fn(() => true),
-}));
+jest.mock('@utils/hooks/useListElementPrepare');
 
 describe('<ListElement />', () => {
-  useImgValidator.mockImplementation(() => true);
+  useListElementPrepare.mockImplementation(() => mockHook);
 
   describe('Render Components', () => {
     beforeEach(() => {
-      render(
-        <ListElement
-          id={id}
-          img={img}
-          name={name}
-          status={status}
-          available={available}
-        />,
-      );
+      render(<ListElement id={id} img={img} name={name} status={status} available={available} />);
     });
 
     it('should render an Avatar', () => {
@@ -56,9 +48,12 @@ describe('<ListElement />', () => {
     });
 
     it('should render a MainBtn', () => {
-      expect(
-        screen.getByRole('button', { name: /Details/i }),
-      ).toBeInTheDocument();
+      expect(screen.getByRole('button', { name: /Details/i })).toBeInTheDocument();
+    });
+
+    it('should click a details button', async () => {
+      await userEvent.click(screen.getByRole('button', { name: /Details/i }));
+      expect(mockHook.handleRoute).toHaveBeenCalledTimes(1);
     });
   });
 });

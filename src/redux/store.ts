@@ -7,8 +7,7 @@ export const store = configureStore({
     modal: modalReducer,
     [friendsApi.reducerPath]: friendsApi.reducer,
   },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(friendsApi.middleware),
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(friendsApi.middleware),
 });
 
 // Infer the `RootState` and `AppDispatch` types from the store itself
